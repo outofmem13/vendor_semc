@@ -25,11 +25,24 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     home-release \
     SemcExactCalculator \
-    semc-organizer
+    semc-organizer \
+    clock-widgets-release \
+    SemcContacts
 
 # Xperia Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
-# Xperia Wallpapers
+# Xperia Wallpapers (XZ, XZ2)
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/semc/prebuilt/semc/etc/customization/content/com/sonyericsson/wallpaperpicker/wallpapers,system/etc/customization/content/com/sonyericsson/wallpaperpicker/wallpapers)
+
+# Build prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    qemu.hw.mainkeys=0 \
+    ro.config.ringtone=Ringer.ogg \
+    ro.config.notification_sound=Notification.ogg \
+    ro.config.alarm_alert=Xperia_alarm.ogg
+
+# Xperia (XZ2) Sounds //TODO: Remove unneeded files
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/semc/prebuilt/semc/media/audio,system/media/audio)
