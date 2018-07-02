@@ -21,7 +21,7 @@ PRODUCT_COPY_FILES += \
     vendor/semc/prebuilt/semc/app/XperiaKeyboard/XperiaKeyboard.apk:system/app/XperiaKeyboard/XperiaKeyboard.apk \
     vendor/semc/prebuilt/semc/app/XperiaKeyboard/lib/arm/libswiftkeysdk-java.so:system/app/XperiaKeyboard/lib/arm/libswiftkeysdk-java.so
 
-# Xperia Home
+# Xperia Apps
 PRODUCT_PACKAGES += \
     home-release \
     SemcExactCalculator \
@@ -29,3 +29,7 @@ PRODUCT_PACKAGES += \
 
 # Xperia Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+
+# Xperia Wallpapers
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/semc/prebuilt/semc/etc/customization/content/com/sonyericsson/wallpaperpicker/wallpapers,system/etc/customization/content/com/sonyericsson/wallpaperpicker/wallpapers)
