@@ -27,7 +27,18 @@ PRODUCT_PACKAGES += \
     SemcExactCalculator \
     semc-organizer \
     clock-widgets-release \
-    SemcContacts
+    SemcContacts \
+    SemcEmail \
+    SemcCalendar \
+    SemcMusic \
+    SemcAlbum \
+    XperiaWeather \
+    SonyAudioRecorder \
+    XperiaTips \
+    gettoknowit \
+    TrackID \
+    XperiaTransferMobile \
+    SemcLifelog
 
 # Xperia Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -46,3 +57,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Xperia (XZ2) Sounds //TODO: Remove unneeded files
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/semc/prebuilt/semc/media/audio,system/media/audio)
+
+# Xperia Framework
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/semc/prebuilt/semc/etc/permissions,system/etc/permissions) \
+    $(call find-copy-subdir-files,*,vendor/semc/prebuilt/semc/framework,system/framework)
+    #$(call find-copy-subdir-files,*,vendor/semc/prebuilt/semc/lib,system/lib) 
+
