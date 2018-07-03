@@ -38,7 +38,22 @@ PRODUCT_PACKAGES += \
     gettoknowit \
     TrackID \
     XperiaTransferMobile \
-    SemcLifelog
+    SemcLifelog \
+    sound-picker-release \
+    MyXperia-release \
+    SomcSketch-live \
+    PhotoWidget-release \
+    SemcPhotoTable \
+    photoslideshow-release \
+    wallpaperpicker-release \
+    SemcPhotoEditor \
+    videoplaceholder \
+    videotvsideview \
+    SomcXperiaServices \
+    GetMore-standard-release \
+    InCallUI \
+    SemcTelecom \
+    SemcTeleService
 
 # Xperia Overlays
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -63,4 +78,15 @@ PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,vendor/semc/prebuilt/semc/etc/permissions,system/etc/permissions) \
     $(call find-copy-subdir-files,*,vendor/semc/prebuilt/semc/framework,system/framework)
     #$(call find-copy-subdir-files,*,vendor/semc/prebuilt/semc/lib,system/lib) 
+
+# Fake Xperia Device
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.semc.product.model=F8331 \
+    ro.semc.ms_type_id=PM-0980-BV \
+    ro.semc.version.fs=GENERIC \
+    ro.semc.product.name=Xperia XZ \
+    ro.semc.product.device=F83 \
+    ro.semc.version.fs_revision=39.0.A.1.250 \
+
+
 
