@@ -28,8 +28,8 @@
 
     <!-- Default theme for Settings and activities launched from Settings. -->
     <style name="Theme.Material.Settings.NoActionBar" parent="Theme.Material.Light.NoActionBar">
-        <item name="colorPrimary">#636d77</item>
-        <item name="colorPrimaryDark">#565f68</item>
+        <item name="colorPrimary">#4f6778</item>
+        <item name="colorPrimaryDark">#3c4f5e</item>
 
         <item name="presentationTheme">@style/Theme.Material.Settings.Dialog.Presentation</item>
         <item name="searchDialogTheme">@style/Theme.Material.Settings.SearchBar</item>
